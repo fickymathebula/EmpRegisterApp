@@ -1,0 +1,31 @@
+<h1 class="heading-text">Employee List</h1>
+
+<div>
+    <button (click)="openAddDialog()">Add New</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <td>EmployeeName</td>
+            <td>StaffNumber</td>
+            <td>Email</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>
+                {{employee.EmployeeName}}
+            </td>
+            <td>
+                {{employee.StaffNumber}}
+            </td>
+            <td>
+                {{employee.Email}}
+            </td>
+            <td>
+                <button (click)="openEditDialog()">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
